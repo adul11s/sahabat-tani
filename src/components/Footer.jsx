@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "../style/footer.css";
 const Footer = (props) => {
   return (
-    <div className="container-fluid bg-success rounded mt-5">
+    <div className="container-fluid bg-success rounded mt-5 pt-5">
       <div className="row">
         <div className="col-lg-3 col-md-3 col-sm-12">
           <table className="text-left">
