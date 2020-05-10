@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Navbar from "../components/Navbar";
 import { connect } from "react-redux";
 import { doLogin, changeInputUser } from "../store/actions/loginAction";
+import Footer from "../components/Footer";
 
 class SignIn extends Component {
   login = async () => {
@@ -23,7 +24,7 @@ class SignIn extends Component {
           <Navbar {...this.props} />
           <div class="container mt-4">
             <div class="row d-flex justify-content-center">
-              <div class="col-5 border p-5">
+              <div class="col-5 border">
                 <form onSubmit={(el) => el.preventDefault()}>
                   <div class="form-group">
                     <div>
@@ -69,6 +70,7 @@ class SignIn extends Component {
               </div>
             </div>
           </div>
+          <Footer />
         </React.Fragment>
       </div>
     );

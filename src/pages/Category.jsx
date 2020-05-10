@@ -4,11 +4,9 @@ import Navbar from "../components/Navbar";
 import { doLogout } from "../store/actions/loginAction";
 import { Redirect, Link } from "react-router-dom";
 import { connect } from "react-redux";
-
-import Carousel from "../components/Carousel";
-import TopProduct from "../components/TopProduct";
 import Footer from "../components/Footer";
 import CategoryBar from "../components/CategoryBar";
+import CategoryDetail from "../components/CategoryDetail";
 
 class Category extends Component {
   //   changeRouter = async (category) => {
@@ -43,8 +41,7 @@ class Category extends Component {
           <React.Fragment>
             <Navbar />
             <CategoryBar />
-            <Carousel />
-            <TopProduct />
+            <CategoryDetail />
             <Footer />
           </React.Fragment>
         ) : (
