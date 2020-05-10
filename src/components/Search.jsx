@@ -1,11 +1,11 @@
 import React from "react";
-
+import "../style/search.css";
 const Search = (props) => {
   return (
     <div>
       <form className="form-inline">
         <input
-          className="form-control "
+          className="form-control  "
           type="search"
           placeholder={props.placeholder}
           onChange={props.doSearch}

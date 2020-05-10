@@ -15,7 +15,7 @@ const MainRoutes = () => {
       <BrowserRouter>
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route exact path="category" component={Category} />
+          <Route exact path="/category" component={Category} />
           <Route exact path="/signin" component={SignIn} />
           <Route exact path="/profile" component={Profile} />
 
