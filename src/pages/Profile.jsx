@@ -2,6 +2,7 @@ import React from "react";
 import { Redirect } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import { connect } from "react-redux";
+import Footer from "../components/Footer";
 
 const Profile = (props) => {
   if (!props.dataUser.isLogin) {
@@ -32,6 +33,7 @@ const Profile = (props) => {
             </div>
           </div>
         </div>
+        <Footer />
       </React.Fragment>
     );
   }
