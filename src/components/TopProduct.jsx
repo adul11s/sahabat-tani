@@ -4,7 +4,7 @@ import "../style/top_product.css";
 const TopProduct = (props) => {
   return (
     <div className="container">
-      <div className="row mt-5">
+      <div className="row pt-5">
         <div className="col-lg-4 col-md-4 col-sm-12">
           <div class="card ukuran ">
             <img

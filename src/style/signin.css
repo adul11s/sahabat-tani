@@ -1,3 +1,7 @@
-.bg-category {
+.bg-signin {
   background-image: linear-gradient(to bottom right, #90ee90, #d4af37);
+}
+
+.bg-card {
+  background-color: #90ee90;
 }

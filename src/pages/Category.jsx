@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import "../style/category_detail.css";
 import Navbar from "../components/Navbar";
 import { doLogout } from "../store/actions/loginAction";
 import { Redirect, Link } from "react-router-dom";
@@ -40,8 +40,10 @@ class Category extends Component {
         {this.props.dataUser.isLogin ? (
           <React.Fragment>
             <Navbar />
-            <CategoryBar />
-            <CategoryDetail />
+            <div className="bg-category">
+              <CategoryBar />
+              <CategoryDetail />
+            </div>
             <Footer />
           </React.Fragment>
         ) : (

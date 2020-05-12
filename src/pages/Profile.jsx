@@ -3,7 +3,7 @@ import { Redirect } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import { connect } from "react-redux";
 import Footer from "../components/Footer";
-
+import "../style/pages.css";
 const Profile = (props) => {
   if (!props.dataUser.isLogin) {
     return (
@@ -18,7 +18,7 @@ const Profile = (props) => {
     return (
       <React.Fragment>
         <Navbar {...props} />
-        <div class="container mt-4">
+        <div class="container-fluid py-4 bg-profil">
           <div class="row d-flex justify-content-center">
             <div class="col-10 border p-5">
               <div class="row">

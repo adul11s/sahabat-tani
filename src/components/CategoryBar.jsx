@@ -4,7 +4,7 @@ import "../style/category_bar.css";
 const CategoryBar = (props) => {
   return (
     <div>
-      <nav className="navbar navbar-expand-lg navbar-success bg-success">
+      <nav className="navbar navbar-expand-lg navbar-success bg-cat-bar">
         <ul className="navbar-nav ">
           <li className="nav-item active">
             <Link className="nav-link nostyle">

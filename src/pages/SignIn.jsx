@@ -3,7 +3,7 @@ import Navbar from "../components/Navbar";
 import { connect } from "react-redux";
 import { doLogin, changeInputUser } from "../store/actions/loginAction";
 import Footer from "../components/Footer";
-
+import "../style/signin.css";
 class SignIn extends Component {
   login = async () => {
     await this.props.doLogin();
@@ -22,14 +22,14 @@ class SignIn extends Component {
       <div>
         <React.Fragment>
           <Navbar {...this.props} />
-          <div class="container mt-4">
+          <div class="container-fluid py-4 bg-signin">
             <div class="row d-flex justify-content-center">
-              <div class="col-5 border">
+              <div class="col-5 border bg-card rounded">
                 <form onSubmit={(el) => el.preventDefault()}>
                   <div class="form-group">
                     <div>
                       <img
-                        className=""
+                        className="img-fluid"
                         src={require("../images/sahabat-tani.png")}
                         width="200"
                         height="200"
@@ -37,7 +37,7 @@ class SignIn extends Component {
                       />
                     </div>
 
-                    <label for="exampleInputEmail1">Email address</label>
+                    <label for="exampleInputEmail1">Username</label>
                     <input
                       type="text"
                       name="nama"
@@ -48,7 +48,7 @@ class SignIn extends Component {
                       onChange={(el) => this.props.changeInput(el)}
                     />
                     <small id="emailHelp" class="form-text text-muted">
-                      We'll never share your email with anyone else.
+                      Never share your username and password with anyone else.
                     </small>
                   </div>
                   <div class="form-group">
@@ -62,10 +62,13 @@ class SignIn extends Component {
                       onChange={(el) => this.props.changeInput(el)}
                     />
                   </div>
-                  <button class="btn btn-primary" onClick={() => this.login()}>
+                  <button
+                    class="btn btn-primary rounded-pill w-100"
+                    onClick={() => this.login()}
+                  >
                     Sign In
                   </button>
-                  <div>Belum punya akun? Daftar disini</div>
+                  <div className="pb-3">Belum punya akun? Daftar disini</div>
                 </form>
               </div>
             </div>

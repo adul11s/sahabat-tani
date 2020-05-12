@@ -4,10 +4,10 @@ import Navbar from "../components/Navbar";
 import { doLogout } from "../store/actions/loginAction";
 import { Redirect, Link } from "react-router-dom";
 import { connect } from "react-redux";
-
 import Carousel from "../components/Carousel";
 import TopProduct from "../components/TopProduct";
 import Footer from "../components/Footer";
+import "../style/pages.css";
 
 class Home extends Component {
   //   changeRouter = async (category) => {
@@ -41,9 +41,10 @@ class Home extends Component {
         {this.props.dataUser.isLogin ? (
           <React.Fragment>
             <Navbar />
-
-            <Carousel />
-            <TopProduct />
+            <div className="bg-index">
+              <Carousel />
+              <TopProduct />
+            </div>
             <Footer />
           </React.Fragment>
         ) : (

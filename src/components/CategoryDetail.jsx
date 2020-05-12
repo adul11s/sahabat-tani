@@ -4,9 +4,9 @@ import "../style/category_detail.css";
 const CategoryDetail = (props) => {
   return (
     <div className="container-fluid">
-      <div className="row mt-5">
-        <div className="col-lg-3 col-md-3 col-sm-12">
-          <div class="card ukuran ">
+      <div className="row mt-3">
+        <div className="col-lg-3 col-md-6 col-sm-12 my-3">
+          <div class="card ukuran d-flex justify-content-center ">
             <img
               src={require("../images/sahabat-tani.png")}
               class="card-img-top"
@@ -28,8 +28,8 @@ const CategoryDetail = (props) => {
             </div>
           </div>
         </div>
-        <div className="col-lg-3 col-md-3 col-sm-12">
-          <div class="card ukuran">
+        <div className="col-lg-3 col-md-6 col-sm-12 my-3">
+          <div class="card ukuran d-flex justify-content-center">
             <img
               src={require("../images/sahabat-tani.png")}
               class="card-img-top"
@@ -51,8 +51,8 @@ const CategoryDetail = (props) => {
             </div>
           </div>
         </div>
-        <div className="col-lg-3 col-md-3 col-sm-12">
-          <div class="card ukuran">
+        <div className="col-lg-3 col-md-6 col-sm-12 my-3">
+          <div class="card ukuran d-flex justify-content-center">
             <img
               src={require("../images/sahabat-tani.png")}
               class="card-img-top"
@@ -74,8 +74,8 @@ const CategoryDetail = (props) => {
             </div>
           </div>
         </div>
-        <div className="col-lg-3 col-md-3 col-sm-12">
-          <div class="card ukuran">
+        <div className="col-lg-3 col-md-6 col-sm-12 my-3">
+          <div class="card ukuran d-flex justify-content-center">
             <img
               src={require("../images/sahabat-tani.png")}
               class="card-img-top"

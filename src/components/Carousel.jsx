@@ -1,12 +1,11 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "../style/carousel.css";
 const Carousel = (props) => {
   return (
     <div className="container">
       <div
         id="carouselExampleCaptions"
-        className="carousel slide mt-5"
+        className="carousel slide pt-5"
         data-ride="carousel"
       >
         <ol className="carousel-indicators">
@@ -24,7 +23,7 @@ const Carousel = (props) => {
         <div className="carousel-inner">
           <div className="carousel-item active">
             <img
-              src={require("../images/fruit.jpeg")}
+              src={require("../images/fruits.jpg")}
               className="d-block w-100 gambar-car"
               alt="..."
             />

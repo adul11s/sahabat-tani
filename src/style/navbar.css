@@ -3,3 +3,10 @@
   text-decoration: none;
   display: block;
 }
+.bg-nav {
+  background-color: #90ee90;
+}
+
+.bg-index {
+  background-image: linear-gradient(to bottom right, #90ee90, #d4af37);
+}
