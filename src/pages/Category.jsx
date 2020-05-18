@@ -25,7 +25,7 @@ class Category extends Component {
             <Navbar />
 
             <CategoryBar />
-            <div className="bg-category row ">
+            <div className="bg-category row">
               <CategoryDetail {...this.props} />
             </div>
             <Footer />

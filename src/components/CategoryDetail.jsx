@@ -5,8 +5,8 @@ const CategoryDetail = (props) => {
   return (
     <div>
       {props.data.data.map((el) => (
-        <div className="col-lg-4 col-md-6 col-sm-12 py-3">
-          <div class="card ukuran d-flex justify-content-center p-0">
+        <div className=" col-md-3 ">
+          <div class="card ukuran  p-0 my-3">
             <img src={el.image} className="card-img-top gambar" alt="..." />
             <div class="card-body text-left">
               <span>
