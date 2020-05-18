@@ -1,0 +1,10 @@
+.bg-index {
+  background-image: linear-gradient(to bottom right, #90ee90, #d4af37);
+}
+
+.bg-profil {
+  background-image: linear-gradient(to bottom right, #90ee90, #d4af37);
+}
+.user-profil {
+  size: 50px;
+}

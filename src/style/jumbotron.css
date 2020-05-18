@@ -1,0 +1,15 @@
+.bg-jumbo {
+  background-image: url(../images/sawah.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.card-jumbo {
+  max-width: 540px;
+}
+.bg-about {
+  background-image: linear-gradient(to bottom right, #90ee90, #d4af37);
+}
+.bg-card {
+  height: 100%;
+  background-image: linear-gradient(to bottom right, #90ee90, #d4af37);
+}
