@@ -1,10 +1,14 @@
 const initialState = {
   username: "",
+  password: "",
+  name: "",
+  age: "",
+  sex: "",
+  address: "",
   email: "",
-  avatar: "",
+  telephone: "",
+  token: "",
   isLogin: false,
-  nama: "",
-  sandi: "",
 };
 
 export default function loginReducer(state = initialState, action) {
@@ -17,13 +21,16 @@ export default function loginReducer(state = initialState, action) {
     case "SUCCESS_LOGIN":
       return {
         ...state,
-        username: action.payload.user_data.username,
-        email: action.payload.user_data.email,
-        avatar: action.payload.user_data.avatar,
+        token: action.payload.token,
         isLogin: true,
       };
     case "LOG_OUT":
       return {
+        isLogin: false,
+      };
+    case "SUCCESS_REGISTER":
+      return {
+        ...state,
         isLogin: false,
       };
     default:

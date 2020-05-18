@@ -3,78 +3,59 @@ import { Link } from "react-router-dom";
 import "../style/category_detail.css";
 const CategoryDetail = (props) => {
   return (
-    <div className="container">
-      <div className="row mt-5">
-        <div className="col-lg-3 col-md-3 col-sm-12">
-          <div class="card ukuran ">
-            <img
-              src={require("../images/sahabat-tani.png")}
-              class="card-img-top"
-              alt="..."
-            />
-            <div class="card-body">
+    <div>
+      {props.data.data.map((el) => (
+        <div className="col-lg-4 col-md-6 col-sm-12 py-3">
+          <div class="card ukuran d-flex justify-content-center p-0">
+            <img src={el.image} className="card-img-top gambar" alt="..." />
+            <div class="card-body text-left">
               <span>
                 {" "}
-                ratings <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star"></span>
-                <span class="fa fa-star"></span>
+                ratings <span className="fa fa-star checked"></span>
+                <span className="fa fa-star checked"></span>
+                <span className="fa fa-star checked"></span>
+                <span className="fa fa-star"></span>
+                <span className="fa fa-star"></span>
               </span>
-              <p class="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </p>
+              <table>
+                <tr>
+                  <td>Name :</td>
+                  <td>{el.product_name}</td>
+                </tr>
+                <tr>
+                  <td>Price :</td>
+                  <td>{el.price}</td>
+                </tr>
+                <tr>
+                  <td>Color :</td>
+                  <td>{el.color}</td>
+                </tr>
+                <tr>
+                  <td>Weight :</td>
+                  <td>{el.weight}</td>
+                </tr>
+                <tr>
+                  <td>Discount :</td>
+                  <td>{el.discount}</td>
+                </tr>
+                <tr>
+                  <td>Sold :</td>
+                  <td>{el.sold}</td>
+                </tr>
+                <tr>
+                  <td> Stock :</td>
+                  <td>{el.stock}</td>
+                </tr>
+              </table>
+              <Link to={"/productdetail/" + el.id}>
+                <button type="button" className="btn btn-info float-right">
+                  See More
+                </button>
+              </Link>
             </div>
           </div>
         </div>
-        <div className="col-lg-3 col-md-3 col-sm-12">
-          <div class="card ukuran">
-            <img
-              src={require("../images/sahabat-tani.png")}
-              class="card-img-top"
-              alt="..."
-            />
-            <div class="card-body">
-              <span>
-                {" "}
-                ratings <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star"></span>
-              </span>
-              <p class="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div className="col-lg-3 col-md-3 col-sm-12">
-          <div class="card ukuran">
-            <img
-              src={require("../images/sahabat-tani.png")}
-              class="card-img-top"
-              alt="..."
-            />
-            <div class="card-body">
-              <span>
-                {" "}
-                ratings <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-              </span>
-              <p class="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
+      ))}
     </div>
   );
 };

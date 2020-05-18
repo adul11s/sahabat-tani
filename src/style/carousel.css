@@ -1,4 +1,7 @@
 .gambar-car {
-  width: 50%;
   height: 400px;
+}
+.font-carousel {
+  font-weight: 700;
+  color: black;
 }

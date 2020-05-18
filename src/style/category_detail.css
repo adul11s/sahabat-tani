@@ -1,0 +1,10 @@
+.bg-category {
+  background-image: linear-gradient(to bottom right, #90ee90, #d4af37);
+}
+.gambar {
+  height: 250px;
+}
+.gambar-detail {
+  height: 400px;
+  width: 100%;
+}
