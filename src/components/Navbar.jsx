@@ -8,10 +8,6 @@ import Search from "./Search";
 const Navbar = (props) => {
   const signOut = async () => {
     await props.doLogout();
-    const isLogin = props.logout;
-    if (!isLogin) {
-      props.history.push("/");
-    }
   };
   return (
     <div>
@@ -50,10 +46,10 @@ const Navbar = (props) => {
             </li>
           </ul>
           <Search {...props} />
-          {props.dataUser.isLogin ? (
+          {localStorage.getItem("isLogin") ? (
             <ul className="navbar-nav ml-auto">
               <li className="nav-item">
-                <Link to="/profile" className="nav-link unstyle" href="">
+                <Link to="/cart" className="nav-link unstyle" href="">
                   <i className="fas fa-cart-arrow-down"></i>
                 </Link>
               </li>
@@ -80,7 +76,7 @@ const Navbar = (props) => {
                 </Link>
               </li>
               <li>
-                <Link className="nav-link unstyle" href="#">
+                <Link to="/signup" className="nav-link unstyle" href="#">
                   Sign Up <span className="sr-only">(current)</span>
                 </Link>
               </li>

@@ -11,7 +11,7 @@ class About extends Component {
   render() {
     return (
       <div>
-        {this.props.dataUser.isLogin ? (
+       {localStorage.getItem("isLogin") ? (
           <React.Fragment>
             <Navbar />
             <div class="container-fluid bg-about py-5">
@@ -49,11 +49,13 @@ class About extends Component {
                   </div>
                   <div class="col-md-8 col-sm-12">
                     <div class="card-body bg-card">
-                      <h3 class="card-title">#PETANISEJAHTERA</h3>
+                      <h3 class="card-title">#TENTANGKITA</h3>
                       <p class="card-text text-left">
-                        This is a wider card with supporting text below as a
-                        natural lead-in to additional content. This content is a
-                        little bit longer.
+                        Lahirnya sahabat tani diawali oleh masih banyaknya
+                        pejuang pejuang pangan di Indonesia yang memiliki taraf
+                        kehidupan yang tidak layak. kami tergugah untuk
+                        membangun indonesia dengan memajukan kesejahteraan
+                        petani-petani Indonesia.
                       </p>
                     </div>
                   </div>

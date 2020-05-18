@@ -5,10 +5,13 @@ const Footer = (props) => {
   return (
     <div className="container-fluid bg-foot rounded pt-3">
       <div className="row">
-        <div className="col-lg-3 col-md-3 col-sm-12 pt-3">
+        <div className="col-lg-3 col-md-6 col-sm-12 pt-3">
           <table className="text-left">
             <tr className="bold unfooter">
-              <td> About</td>
+              <td>
+                {" "}
+                <h3>About</h3>
+              </td>
             </tr>
             <tr>
               <td>
@@ -26,14 +29,22 @@ const Footer = (props) => {
             </tr>
           </table>
         </div>
-        <div className="col-lg-3 col-md-3 col-sm-12 pt-3">
+        <div className="col-lg-3 col-md-6 col-sm-12 pt-3">
           <table className="text-left">
             <tr className="bold unfooter">
-              <td> Partner </td>
+              <td>
+                {" "}
+                <h3>Partner</h3>{" "}
+              </td>
             </tr>
             <tr>
               <td>
                 <Link className=" unfooter" href="https://alterra.co.id/">
+                  <img
+                    className="ukuran-logo-footer"
+                    src={require("../images/logo-ALTA@2x.png")}
+                    alt=""
+                  />{" "}
                   Alterra
                 </Link>
               </td>
@@ -41,6 +52,11 @@ const Footer = (props) => {
             <tr>
               <td>
                 <Link className=" unfooter" href="https://ipb.ac.id/">
+                  <img
+                    className="ukuran-logo-footer"
+                    src={require("../images/Logo-IPB.png")}
+                    alt=""
+                  />{" "}
                   IPB
                 </Link>
               </td>
@@ -48,16 +64,24 @@ const Footer = (props) => {
             <tr>
               <td>
                 <Link className=" unfooter" href="https://pertanian.go.id">
+                  <img
+                    className="ukuran-logo-footer"
+                    src={require("../images/kementan.png")}
+                    alt=""
+                  />{" "}
                   KEMENTAN RI
                 </Link>
               </td>
             </tr>
           </table>
         </div>
-        <div className="col-lg-3 col-md-3 col-sm-12 pt-3">
+        <div className="col-lg-3 col-md-6 col-sm-12 pt-3">
           <table className="text-left">
             <tr className="bold unfooter">
-              <td> Social Media</td>
+              <td>
+                {" "}
+                <h3>Social Media</h3>
+              </td>
             </tr>
             <tr>
               <td>
@@ -89,10 +113,13 @@ const Footer = (props) => {
             </tr>
           </table>
         </div>
-        <div className="col-lg-3 col-md-3 col-sm-12 pt-3">
+        <div className="col-lg-3 col-md-6 col-sm-12 pt-3">
           <table className="text-left">
             <tr className="bold unfooter">
-              <td> Contact Us </td>
+              <td>
+                {" "}
+                <h3>Contact Us</h3>{" "}
+              </td>
             </tr>
             <tr>
               <td>

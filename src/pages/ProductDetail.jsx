@@ -1,29 +1,30 @@
 import React, { Component } from "react";
-import { getTopProduct } from "../store/actions/categoriesAction";
-import Navbar from "../components/Navbar";
 import { doLogout } from "../store/actions/loginAction";
-import { Redirect, Link } from "react-router-dom";
+import "../style/category_detail.css";
+import Navbar from "../components/Navbar";
+import { getProduct, getProductId } from "../store/actions/categoriesAction";
+import { postTransaction } from "../store/actions/transactionAction";
+import { Redirect } from "react-router-dom";
 import { connect } from "react-redux";
-import Carousel from "../components/Carousel";
-import TopProduct from "../components/TopProduct";
 import Footer from "../components/Footer";
-import "../style/pages.css";
+import DetailProduct from "../components/DetailProduct";
 
-class Home extends Component {
+class ProductDetail extends Component {
   componentDidMount = async () => {
-    await this.props.getTopProduct();
-    // const paramCategory = await this.props.match.params.top_product;
-    this.props.getTopProduct();
+    await this.props.getProduct();
+    const paramCategory = await this.props.match.params.id;
+    this.props.getProductId(paramCategory);
   };
+
   render() {
+    console.log("cek aja props detail product", this.props);
     return (
       <div>
         {localStorage.getItem("isLogin") ? (
           <React.Fragment>
             <Navbar />
-            <div className="bg-index">
-              <Carousel />
-              <TopProduct {...this.props} />
+            <div className="bg-category">
+              <DetailProduct postTrans={this.postTransaction} {...this.props} />
             </div>
             <Footer />
           </React.Fragment>
@@ -51,6 +52,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = {
   doLogout,
-  getTopProduct,
+  getProduct,
+  getProductId,
+  postTransaction,
 };
-export default connect(mapStateToProps, mapDispatchToProps)(Home);
+export default connect(mapStateToProps, mapDispatchToProps)(ProductDetail);

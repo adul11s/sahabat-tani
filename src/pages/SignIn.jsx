@@ -40,7 +40,7 @@ class SignIn extends Component {
                     <label for="exampleInputEmail1">Username</label>
                     <input
                       type="text"
-                      name="nama"
+                      name="username"
                       placeholder="username"
                       class="form-control"
                       id="exampleInputEmail1"
@@ -55,7 +55,7 @@ class SignIn extends Component {
                     <label for="exampleInputPassword1">Password</label>
                     <input
                       type="password"
-                      name="sandi"
+                      name="password"
                       placeholder="password"
                       class="form-control"
                       id="exampleInputPassword1"
@@ -81,8 +81,8 @@ class SignIn extends Component {
 }
 const mapStateToProps = (state) => {
   return {
-    nama: state.login.nama,
-    sandi: state.login.sandi,
+    username: state.login.username,
+    password: state.login.password,
     isLogin: state.login,
   };
 };
