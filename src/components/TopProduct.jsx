@@ -5,8 +5,8 @@ const TopProduct = (props) => {
   return (
     <div className="row">
       {props.data.data.map((el) => (
-        <div className="col-lg-3 col-md-6 col-sm-12 my-3 ">
-          <div class="card ukuran d-flex justify-content-center">
+        <div className="col-lg-3 col-md-6 col-sm-12 my-3 p-0 ">
+          <div class="card ukuran">
             <img src={el.image} className="card-img-top gambar-top" alt="..." />
             <div class="card-body text-left">
               <span>
