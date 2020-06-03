@@ -26,7 +26,22 @@ class Category extends Component {
 
             <CategoryBar />
             <div className="bg-category row">
-              <CategoryDetail {...this.props} />
+              {this.props.data.data.map((el, index) => (
+                <div className="col-md-3 my-3" key={index}>
+                  <CategoryDetail
+                    image={el.image}
+                    product_name={el.product_name}
+                    price={el.price}
+                    color={el.color}
+                    weight={el.weight}
+                    discount={el.discount}
+                    sold={el.sold}
+                    stock={el.stock}
+                    id={el.id}
+                    {...this.props}
+                  />
+                </div>
+              ))}
             </div>
             <Footer />
           </React.Fragment>
@@ -45,7 +60,6 @@ class Category extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    dataUser: state.login,
     dataUser: state.login,
     logout: state.login.isLogin,
     data: state.categories,
