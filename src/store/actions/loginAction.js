@@ -1,6 +1,6 @@
 import axios from "axios";
 import jwt from "jwt-decode";
-export const doLogin = () => {
+export const doLogin = (props) => {
   return async (dispatch, getState) => {
     const username = getState().login.username;
     const password = getState().login.password;
@@ -15,7 +15,7 @@ export const doLogin = () => {
           localStorage.setItem("isLogin", true);
           const token = localStorage.getItem("token");
           const user = jwt(token);
-          const claims = user["user_claims"]["id"];
+          const claims = user["user_claims"]["client_id"];
           const client = claims.toString();
           const bio = await axios.get(
             "https://lolbe.perintiscerita.shop/user/" + client,
