@@ -64,7 +64,7 @@ const Navbar = (props) => {
                   className="nav-link unstyle"
                   href="#"
                 >
-                  keluar <span className="sr-only">(current)</span>
+                  Sign Out <span className="sr-only">(current)</span>
                 </Link>
               </li>
             </ul>
