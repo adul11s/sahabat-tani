@@ -8,7 +8,6 @@ export default function productReducer(stateCategories = initialState, action) {
         isLoading: false,
         data: action.payload,
       };
-      console.log("ceeeeeeeeeeeeeeeekkkkkkkkkkkkkkkkkkkk masuuuuuuukkkkkkkk");
     case "REQUEST_LIST_PRODUCT_SUCCESS":
       return {
         ...stateCategories,

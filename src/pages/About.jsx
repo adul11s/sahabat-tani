@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "../style/jumbotron.css";
 import Navbar from "../components/Navbar";
 import { doLogout } from "../store/actions/loginAction";
-import { Redirect, Link } from "react-router-dom";
+import { Redirect } from "react-router-dom";
 import { connect } from "react-redux";
 import Footer from "../components/Footer";
 import Jumbotron from "../components/Jumbotron";
@@ -11,7 +11,7 @@ class About extends Component {
   render() {
     return (
       <div>
-       {localStorage.getItem("isLogin") ? (
+        {localStorage.getItem("isLogin") ? (
           <React.Fragment>
             <Navbar />
             <div class="container-fluid bg-about py-5">
@@ -79,7 +79,6 @@ class About extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    dataUser: state.login,
     dataUser: state.login,
     logout: state.login.isLogin,
   };

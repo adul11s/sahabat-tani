@@ -9,7 +9,7 @@ export const getProduct = (category) => {
       .then(async (response) => {
         if (category) {
           const filtercategory = response.data.filter((item) => {
-            if (item.category_id == category) {
+            if (item.category_id === category) {
               return item;
             } else {
               return false;
@@ -39,7 +39,7 @@ export const getProductId = (id) => {
       .then(async (response) => {
         if (id) {
           const filterid = response.data.filter((item) => {
-            if (item.id == Number(id)) {
+            if (item.id === Number(id)) {
               return item;
             } else {
               return false;
@@ -87,7 +87,7 @@ export const getMyProduct = () => {
       .then(async (response) => {
         const bio = JSON.parse(localStorage.getItem("bio"));
         const filtermyproduct = response.data.filter((item) => {
-          if (item.seller_id == Number(bio["id"])) {
+          if (item.seller_id === Number(bio["id"])) {
             return item;
           } else {
             return false;

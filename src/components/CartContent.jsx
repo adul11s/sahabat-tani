@@ -24,9 +24,7 @@ const CartContent = (props) => {
           </tr>
         </table>
 
-        <a href="#" class="btn btn-primary">
-          Checkout
-        </a>
+        <div class="btn btn-primary">Checkout</div>
       </div>
     </div>
   );
