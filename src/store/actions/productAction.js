@@ -16,7 +16,7 @@ export const addProduct = (props) => {
       stock: getState().product.stock,
     };
     const register = await axios.post(
-      "http://0.0.0.0:5050/product",
+      "https://lolbe.perintiscerita.shop/product",
       bodyRequest
     );
     console.log("data", register.data);
@@ -41,7 +41,7 @@ export const patchProduct = (props) => {
     };
     const id = getState().product.id;
     const register = await axios.post(
-      "http://0.0.0.0:5050/product/" + id,
+      "https://lolbe.perintiscerita.shop/product/" + id,
       bodyRequest
     );
     console.log("data", register.data);
@@ -52,7 +52,9 @@ export const delProduct = (props) => {
   return async (dispatch, getState) => {
     const id = getState().product.id;
 
-    const register = await axios.delete("http://0.0.0.0:5050/product/" + id);
+    const register = await axios.delete(
+      "https://lolbe.perintiscerita.shop/" + id
+    );
     console.log("data", register.data);
     dispatch({ type: "SUCCESS_DELETE_PRODUCT" });
   };

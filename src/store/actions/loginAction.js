@@ -5,7 +5,7 @@ export const doLogin = (props) => {
     const username = getState().login.username;
     const password = getState().login.password;
     await axios
-      .get("http://0.0.0.0:5050/auth", {
+      .get("https://lolbe.perintiscerita.shop/auth", {
         params: { username: username, password: password },
       })
       .then(async (response) => {
@@ -17,13 +17,16 @@ export const doLogin = (props) => {
           const user = jwt(token);
           const claims = user["user_claims"]["client_id"];
           const client = claims.toString();
-          const bio = await axios.get("http://0.0.0.0:5050/user/" + client, {
-            headers: {
-              "Content-Type": "application/json; charset=utf-8",
-              Accept: "application/json; charset=utf-8",
-              Authorization: `Bearer ${token}`,
-            },
-          });
+          const bio = await axios.get(
+            "https://lolbe.perintiscerita.shop/user/" + client,
+            {
+              headers: {
+                "Content-Type": "application/json; charset=utf-8",
+                Accept: "application/json; charset=utf-8",
+                Authorization: `Bearer ${token}`,
+              },
+            }
+          );
           localStorage.setItem("bio", JSON.stringify(bio.data));
         }
       })
@@ -63,7 +66,7 @@ export const doRegister = (props) => {
       top_product: getState().login.top_product,
     };
     const register = await axios.post(
-      "http://0.0.0.0:5050/register",
+      "https://lolbe.perintiscerita.shop/register",
       bodyRequest
     );
     console.log("data", register.data);

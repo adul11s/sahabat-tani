@@ -1,5 +1,5 @@
 import axios from "axios";
-const url = "http://0.0.0.0:5050/product/list";
+const url = "https://lolbe.perintiscerita.shop/product/list";
 
 // untuk mendapatkan list movie
 export const getProduct = (category) => {

@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const baseUrl = "http://0.0.0.0:5050";
+const baseUrl = "https://lolbe.perintiscerita.shop";
 
 export const postTransaction = (
   product_id,
