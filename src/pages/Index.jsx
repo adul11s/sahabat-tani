@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { getTopProduct } from "../store/actions/categoriesAction";
 import Navbar from "../components/Navbar";
 import { doLogout } from "../store/actions/loginAction";
-import { Redirect, Link } from "react-router-dom";
+import { Redirect } from "react-router-dom";
 import { connect } from "react-redux";
 import Carousel from "../components/Carousel";
 import TopProduct from "../components/TopProduct";
@@ -42,7 +42,6 @@ class Home extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    dataUser: state.login,
     dataUser: state.login,
     logout: state.login.isLogin,
     data: state.categories,

@@ -44,7 +44,6 @@ class ProductDetail extends Component {
 const mapStateToProps = (state) => {
   return {
     dataUser: state.login,
-    dataUser: state.login,
     logout: state.login.isLogin,
     data: state.categories,
   };

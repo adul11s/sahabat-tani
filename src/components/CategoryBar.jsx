@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import "../style/category_bar.css";
 const CategoryBar = (props, changeRouter) => {
   return (

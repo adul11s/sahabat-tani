@@ -15,9 +15,9 @@ class SignUp extends Component {
   };
 
   render() {
-    const message = this.props.location.state
-      ? this.props.location.state.message
-      : "masukkan username dan password";
+    // const message = this.props.location.state
+    //   ? this.props.location.state.message
+    //   : "masukkan username dan password";
     return (
       <div>
         <React.Fragment>
