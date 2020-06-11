@@ -52,10 +52,8 @@ export const delProduct = (props) => {
   return async (dispatch, getState) => {
     const id = getState().product.id;
 
-    const register = await axios.delete(
-      "https://lolbe.perintiscerita.shop/" + id
-    );
-    console.log("data", register.data);
+    console.log("data", id);
+    await axios.delete(`https://lolbe.perintiscerita.shop/product/${id}`);
     dispatch({ type: "SUCCESS_DELETE_PRODUCT" });
   };
 };

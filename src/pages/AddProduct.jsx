@@ -7,6 +7,7 @@ import "../style/signin.css";
 class AddProduct extends Component {
   addProd = async () => {
     await this.props.addProduct();
+    this.props.history.push("/");
     const isLogin = this.props.isLogin;
     console.log(isLogin);
     if (isLogin) {
